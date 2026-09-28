@@ -1,0 +1,29 @@
+CREATE TABLE employees (
+    employee_id INT PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    department VARCHAR(50),
+    salary DECIMAL(10, 2)
+);
+
+INSERT INTO employees (employee_id, first_name, last_name, department, salary) VALUES
+(1, 'Alice', 'Smith', 'Engineering', 85000),
+(2, 'Bob', 'Johnson', 'Marketing', 60000),
+(3, 'Charlie', 'Lee', 'Engineering', 95000),
+(4, 'Diana', 'Prince', 'HR', 55000),
+(5, 'Ethan', 'Hunt', 'Marketing', 62000);
+
+
+Select QUERY
+
+SELECT * 
+FROM employees;
+
+SELECT first_name, last_name, department, salary
+FROM employees
+WHERE department = 'Engineering';
+
+SELECT first_name, last_name, salary
+FROM employees
+WHERE salary > 58000
+ORDER BY salary DESC;
